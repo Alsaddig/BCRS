@@ -1,0 +1,170 @@
+[
+  {
+    "_id": "5d7a514b5d2c12c7449be042",
+    "username": "nliebhart",
+    "firstName": "Nathaniel",
+    "lastName": "Liebhart",
+    "phoneNumber": "302-560-4759",
+    "street": "3 Carpenter Lane",
+    "city": "Newark",
+    "state": "DE",
+    "zipCode": "19725",
+    "email": "nathaniel95975@gmail.com",
+    "role": "admin",
+    "securityAnswers": [
+      {
+        "questionId": "5e8e7185fc13ae3ea4000000",
+        "answer": "answer"
+      },
+      {
+        "questionId": "5e8e7185fc13ae3ea4000001",
+        "answer": "answer"
+      },
+      {
+        "questionId": "5e8e7185fc13ae3ea4000002",
+        "answer": "answer"
+      }
+    ],
+    "password": "password"
+  },
+  {
+    "_id": "5d7a514b5d2c12c7449be043",
+    "username": "kleadley",
+    "firstName": "Kurt",
+    "lastName": "Leadley",
+    "phoneNumber": "516-861-6989",
+    "street": "3 Service Parkway",
+    "city": "Jamaica",
+    "state": "NY",
+    "zipCode": "11407",
+    "email": "kleadley@my365.bellevue.edu",
+    "role": "admin",
+    "securityAnswers": [
+      {
+        "questionId": "5e8e7185fc13ae3ea4000000",
+        "answer": "answer"
+      },
+      {
+        "questionId": "5e8e7185fc13ae3ea4000001",
+        "answer": "answer"
+      },
+      {
+        "questionId": "5e8e7185fc13ae3ea4000002",
+        "answer": "answer"
+      }
+    ],
+    "password": "password"
+  },
+  {
+    "_id": "5d7a514b5d2c12c7449be044",
+    "username": "lwetzel",
+    "firstName": "Loren",
+    "lastName": "Wetzel",
+    "phoneNumber": "203-291-0312",
+    "street": "772 Summerview Drive",
+    "city": "New Haven",
+    "state": "CT",
+    "zipCode": "06505",
+    "email": "lwetzel@my365.bellevue.edu",
+    "role": "admin",
+    "securityAnswers": [
+      {
+        "questionId": "5e8e7185fc13ae3ea4000000",
+        "answer": "answer"
+      },
+      {
+        "questionId": "5e8e7185fc13ae3ea4000001",
+        "answer": "answer"
+      },
+      {
+        "questionId": "5e8e7185fc13ae3ea4000002",
+        "answer": "answer"
+      }
+    ],
+    "password": "password"
+  },
+  {
+    "_id": "5d7a514b5d2c12c7449be045",
+    "username": "aibrahim",
+    "firstName": "Alsaddig",
+    "lastName": "Ibrahim",
+    "phoneNumber": "339-902-6007",
+    "street": "66 Lyons Point",
+    "city": "Woburn",
+    "state": "MA",
+    "zipCode": "01813",
+    "email": "aibrahim@my365.bellevue.edu",
+    "role": "admin",
+    "securityAnswers": [
+      {
+        "questionId": "5e8e7185fc13ae3ea4000000",
+        "answer": "answer"
+      },
+      {
+        "questionId": "5e8e7185fc13ae3ea4000001",
+        "answer": "answer"
+      },
+      {
+        "questionId": "5e8e7185fc13ae3ea4000002",
+        "answer": "answer"
+      }
+    ],
+    "password": "password"
+  },
+  {
+    "_id": "5d7a514b5d2c12c7449be046",
+    "username": "jdoe",
+    "firstName": "John",
+    "lastName": "Doe",
+    "phoneNumber": "302-560-4759",
+    "street": "3 Carpenter Lane",
+    "city": "Newark",
+    "state": "DE",
+    "zipCode": "19725",
+    "email": "johndoe@email.com",
+    "role": "standard",
+    "securityAnswers": [
+      {
+        "questionId": "5e8e7185fc13ae3ea4000000",
+        "answer": "answer"
+      },
+      {
+        "questionId": "5e8e7185fc13ae3ea4000001",
+        "answer": "answer"
+      },
+      {
+        "questionId": "5e8e7185fc13ae3ea4000002",
+        "answer": "answer"
+      }
+    ],
+    "password": "password"
+  },
+  {
+    "_id": "5d7a514b5d2c12c7449be047",
+    "username": "janedoe",
+    "firstName": "Jane",
+    "lastName": "Doe",
+    "phoneNumber": "302-560-4759",
+    "street": "3 Carpenter Lane",
+    "city": "Newark",
+    "state": "DE",
+    "zipCode": "19725",
+    "email": "janegdoe@email.com",
+    "role": "standard",
+    "securityAnswers": [
+      {
+        "questionId": "5e8e7185fc13ae3ea4000000",
+        "answer": "answer"
+      },
+      {
+        "questionId": "5e8e7185fc13ae3ea4000001",
+        "answer": "answer"
+      },
+      {
+        "questionId": "5e8e7185fc13ae3ea4000002",
+        "answer": "answer"
+      }
+    ],
+    "password": "password"
+  }
+]

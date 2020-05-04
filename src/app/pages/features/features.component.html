@@ -1,0 +1,126 @@
+<div class="wrapper">
+  <div class="section-space">
+    <div class="header header-4">
+      <div class="header-wrapper">
+        <!-- Start video header -->
+        <div class="page-header header-video header-filter">
+          <div class="overlay"></div>
+          <video autoplay="autoplay" muted="muted" playsinline="playsinline">
+            <source src="assets/img/videos/feature-header-video.mp4" type="video/mp4" />
+          </video>
+          <div class="container">
+            <div class="video-text content-center">
+              <img src="assets/img/bcrs-logo.png" class="pb-3" style="max-width: 400px;" alt="BCRS logo" />
+              <h2 class="description text-danger">Check out our</h2>
+              <h1 class="title text-primary">No hassle services</h1>
+              <h2 class="title text-danger">Below</h2>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Services -->
+    <div class="space-110"></div>
+    <div class="section section-testimonials">
+      <div class="content-center">
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-5 col-md-8 col-12 ml-auto mr-auto text-center">
+              <h1 class="title">An IT solution</h1>
+              <h3 class="category text-info">
+                <strong>for every type of user.</strong>
+              </h3>
+              <p class="description">
+                At BCRS, we recognize that every computer users has their own unique needs when it comes to their
+                computer. And with those needs come very different challenges, that is why our trained professionals are
+                knowledgeable in every aspect of the industry, and our services reflect it.
+              </p>
+            </div>
+            <div class="row">
+              <div class="container">
+                <div class="col-md-6">
+                  <carousel [showIndicators]="true">
+                    <slide *ngFor="let service of serviceList">
+                      <div class="header-filter">
+                        <img src="{{ service.imageUrl }}" height="500px" alt="{{service.title}}"/>
+                      </div>
+                      <div class="carousel-caption">
+                        <h2 class="title text-success">{{ service.title }}</h2>
+                        <h3 style="font-weight: bold;" class="category text-primary">{{ service.price | currency }}</h3>
+                        <p class="description text-danger">{{ service.description }}</p>
+                      </div>
+                    </slide>
+                  </carousel>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- <div class="header header-3">
+      <div class="page-header header-filter">
+        <div class="content-center">
+          <div class="row">
+            <div class="col-lg-5 col-md-8 col-12 ml-auto mr-auto positioned">
+              <h1 class="title">Title</h1>
+              <p class="description">Description</p>
+              <a routerLink="/contact-us" class="btn btn-lg btn-primary">
+                Contact us today
+              </a>
+            </div>
+          </div>
+
+          <div class="col-md-12 col-md-6">
+            <section class="center glide1">
+              <div class="glide__track" data-glide-el="track">
+                <ul class="glide__slides">
+                  <li class="glide__slide" *ngFor="let service of serviceList">
+                    <img height="400" src="{{service.imageUrl}}" width="350" />
+                  </li>
+                </ul>
+
+                <div data-glide-el="controls">
+                  <button
+                    class="btn btn-round btn-icon btn-primary btn-simple slick-prev slick-arrow"
+                    data-glide-dir="<"
+                    aria-label="Previous"
+                    type="button"
+                    style=""
+                  >
+                    <i class="tim-icons icon-minimal-left"></i>
+                  </button>
+                  <button
+                    class="btn btn-round btn-icon btn-primary btn-simple slick-next slick-arrow"
+                    data-glide-dir=">"
+                    aria-label="Next"
+                    type="button"
+                    style=""
+                  >
+                    <i class="tim-icons icon-minimal-right"></i>
+                  </button>
+                </div>
+              </div>
+            </section>
+          </div>
+        </div>
+      </div>
+    </div> -->
+    <!-- <div class="service-area">
+      <div class="service-grid" *ngFor="let service of serviceList">
+        <div class='grid-left'>
+          <h2>{{service.title}}</h2>
+          <p>{{service.description}}</p>
+          <p>For a low price of... {{service.price | currency}} !</p>
+          <a routerLink="/contact-us" class="btn btn-lg btn-primary">
+            Contact us today
+          </a>
+        </div>
+        <div class ='grid-right'>
+          <img src ='{{service.imageUrl}}' alt='{{service.title}}' height="400" width="350" />
+        </div>
+      </div>
+    </div> -->
+  </div>
+</div>

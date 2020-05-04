@@ -1,0 +1,158 @@
+<div class="card card-login">
+  <form [formGroup]="usersForm" (ngSubmit)="onSave()">
+    <div class="card-header">
+      <img alt="Card image" class="card-img" src="assets/img/square-purple-1.png" />
+      <h4 class="card-title">{{ data.action }}<br /><br /><br /><span class="mb-2">User</span></h4>
+    </div>
+    <div [hidden]="data.action.toString() === 'Delete' || data.action.toString() === 'Reset'">
+      <div class="card-body">
+        <div [hidden]="data.action.toString() === 'Add'">
+          <div class="row">
+            <div class="input-group col-md-12">
+              <div class="input-group-prepend">
+                <span class="input-group-text">
+                  <i class="tim-icons icon-badge"></i>
+                </span>
+              </div>
+              <input class="form-control" type="text" formControlName="_id" readonly />
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="input-group col-md-12">
+            <div class="input-group-prepend">
+              <span class="input-group-text">
+                <i class="tim-icons icon-single-02"></i>
+              </span>
+            </div>
+            <input class="form-control" type="text" formControlName="username" />
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="input-group col-md-6">
+            <div class="input-group-prepend">
+              <span class="input-group-text">
+                <i class="tim-icons icon-caps-small"></i>
+              </span>
+            </div>
+            <input class="form-control" type="text" formControlName="firstName" required />
+          </div>
+          <div class="input-group col-md-6">
+            <div class="input-group-prepend">
+              <span class="input-group-text">
+                <i class="tim-icons icon-caps-small"></i>
+              </span>
+            </div>
+            <input class="form-control" type="text" formControlName="lastName" required />
+          </div>
+        </div>
+        <div class="row">
+          <div class="input-group col-md-6">
+            <div class="input-group-prepend">
+              <span class="input-group-text">
+                <i class="tim-icons icon-email-85"></i>
+              </span>
+            </div>
+            <input class="form-control" type="email" formControlName="email" required />
+          </div>
+          <div class="input-group col-md-6">
+            <div class="input-group-prepend">
+              <span class="input-group-text">
+                <i class="tim-icons icon-mobile"></i>
+              </span>
+            </div>
+            <input class="form-control" type="text" formControlName="phoneNumber" />
+          </div>
+        </div>
+        <div class="row">
+          <div class="input-group col-md-6">
+            <div class="input-group-prepend">
+              <span class="input-group-text">
+                <i class="tim-icons icon-square-pin"></i>
+              </span>
+            </div>
+            <input class="form-control" type="text" formControlName="street" />
+          </div>
+          <div class="input-group col-md-3">
+            <div class="input-group-prepend">
+              <span class="input-group-text">
+                <i class="tim-icons icon-world"></i>
+              </span>
+            </div>
+            <input class="form-control" type="text" formControlName="city" />
+          </div>
+          <div class="input-group col-md-3">
+            <div class="input-group-prepend">
+              <span class="input-group-text">
+                <i class="tim-icons icon-world"></i>
+              </span>
+            </div>
+            <input class="form-control" type="text" formControlName="zipCode" />
+          </div>
+        </div>
+        <div class="row">
+          <div class="input-group col-md-6">
+            <div class="input-group-prepend">
+              <span class="input-group-text">
+                <i class="tim-icons icon-world"></i>
+              </span>
+            </div>
+            <select name="state" class="form-control btn-primary btn-simple" formControlName="state" required>
+              <option *ngFor="let state of states" [value]="state.abbreviation">
+                {{ state.name }}
+              </option>
+            </select>
+          </div>
+          <div class="input-group col-md-6">
+            <div class="input-group-prepend">
+              <span class="input-group-text">
+                <i class="tim-icons icon-puzzle-10"></i>
+              </span>
+            </div>
+            <select name="role" class="form-control btn-primary btn-simple" formControlName="role" required>
+              <option *ngFor="let role of roles" [value]="role.text">
+                {{ role.text }}
+              </option>
+            </select>
+          </div>
+        </div>
+
+        <input type="text" formControlName="disabled" [hidden]="true" />
+      </div>
+    </div>
+    <div [hidden]="data.action.toString() !== 'Delete'" class="text-danger">
+      Are you sure you wish to disable {{ data.obj.username }}?
+    </div>
+    <div [hidden]="data.action.toString() === 'Delete' || data.action.toString() === 'Update'">
+      <div class="input-group input-lg">
+        <div class="input-group ml-2 mr-2">
+          <input
+            aria-label="Password"
+            class="form-control"
+            name="password"
+            formControlName="password"
+            #password
+            required
+            placeholder="Password..."
+            [type]="hide ? 'text' : 'password'"
+            type="password"
+          />
+          <div class="input-group-append">
+            <span class="input-group-text">
+              <i (click)="hide = !hide" class="tim-icons icon-lock-circle"></i>
+            </span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="card-footer text-center">
+      <button class="btn btn-danger mr-1" type="submit" [class.spinner]="loading" [disabled]="loading">
+        {{ data.action.toString() }}
+      </button>
+      <button (click)="onNoClick()" class="btn btn-danger btn-simple" type="reset">
+        Cancel
+      </button>
+    </div>
+  </form>
+</div>

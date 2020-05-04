@@ -1,0 +1,15 @@
+.overlay {
+  background: rgba(0, 0, 0, 0.4);
+  z-index: 2;
+  img {
+    z-index: 1;
+  }
+}
+.carousel-caption {
+  z-index: 3;
+}
+.container {
+  .col-md-6 {
+    margin-left: 290px;
+  }
+}

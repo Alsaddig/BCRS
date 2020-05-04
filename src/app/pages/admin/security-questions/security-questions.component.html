@@ -1,0 +1,69 @@
+<div class="wrapper">
+  <div class="section">
+    <div class="container">
+      <div class="space-90"></div>
+      <div class="cd-section">
+        <div id="tables">
+          <div class="row">
+            <div class="col-md-12 ml-auto mr-auto">
+              <div class="card card-plain bg-default">
+                <div class="card-header">
+                  <h1 class="card-title text-center text-primary">
+                    Security Question Configuration
+                  </h1>
+                  <button
+                    (click)="openDialog('Create', null)"
+                    class="btn btn-neutral btn-round btn-icon pull-right mr-5 mb-5"
+                    placement="right"
+                    tooltip="Create New Security Question"
+                  >
+                    <i class="tim-icons icon-simple-add"></i>
+                  </button>
+                  <div class="card-body">
+                    <div class="table-responsive">
+                      <table class="table tablesorter">
+                        <thead>
+                          <tr>
+                            <th class="text-left"><h4 class="text-danger">Question</h4></th>
+                            <th class="text-center"><h4 class="text-danger">Disabled</h4></th>
+                            <th class="text-right"><h4 class="text-danger">Actions</h4></th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr *ngFor="let question of securityQuestions">
+                            <td class="text-left">{{ question.text }}</td>
+                            <td class="text-center">
+                              <bSwitch
+                                [switch-on-color]="'primary'"
+                                [switch-off-color]="'primary'"
+                                [(ngModel)]="question.disabled"
+                                (changeState)="openDialog('Delete', question)"
+                              >
+                                {{ question.disabled ? 'On' : 'Off' }}
+                              </bSwitch>
+                            </td>
+                            <td class="text-right">
+                              <button
+                                class="btn btn-success btn-simple btn-icon btn-sm mr-1"
+                                type="button"
+                                (click)="openDialog('Update', question)"
+                                placement="left"
+                                tooltip="Update Security Question"
+                              >
+                                <i class="tim-icons icon-settings"></i>
+                              </button>
+                            </td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
